@@ -27,91 +27,110 @@ Execute the program using runserver command.
 ```
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>time-table</title>
     <STYLE>
-            body {
+        body {
             margin: 0;
         }
-        .slot-time{
+
+        .slot-time {
             border-collapse: collapse;
             align-items: center;
             text-align: center;
             margin-left: 10%;
             margin-top: 3%;
-            width:80%;
+            width: 80%;
+            border:2px solid black;
         }
-        .subject-time{
+
+        .subject-time {
             border-collapse: collapse;
             align-items: center;
             text-align: center;
             margin-left: 25%;
             margin-top: 3%;
-            width:50%;
+            width: 50%;
+            border:2px solid black;
         }
-        td,th{
+
+        td,
+        th {
             padding: 1%;
         }
-        th{
-        font-weight: bolder;
-        font-size: 20px;
+
+        th {
+            font-weight: bolder;
+            font-size: 20px;
         }
-        .slot{
+
+        .slot {
             font-weight: bolder;
         }
-        
+        th,.slot{
+            background-color:rgb(242, 102, 102);
+        }
+     td{
+        background-color:bisque;
+     }
     </STYLE>
     {% load static %}
 </head>
+
 <body>
     <img src="{%static 'logo.png'%}" alt="Logo" width="60%" height="130px" style="margin-left:20%">
     <h1 style="text-align:center;margin-top:3%;"><u>SLOT TIME TABLE DIVYA S (212221040043)</u></h1>
     <table border="1" class="slot-time">
         <thead>
-        <tr>
-            <th style="padding:0%;">Day/Time</th>
-            <th>Monday</th>
-            <th>Tusday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td class="slot">8-10</td>
-<td style="color:orange">ENERGY TECHNOLOGY</td>
-<td style="color:green">FUNDAMENTALS OF WEB APPLICATION DEVELOPMENT</td>
-<td style="color:deeppink">MERN FULL STACK</td>
-<td style="color:purple">DESIGN AND ANALYTICS OF ALGORITHMS</td>
-<td style="color:deeppink">MERN FULL STACK</td>
-</tr>
-<tr>
-    <td class="slot">10-12</td>
-<td style="color:purple">DESIGN AND ANALYTICS OF ALGORITHMS</td>
-<td style="color:deeppink">MERN FULL STACK</td>
-<td style="color:olive">FREE HOUR</td>
-<td style="color:blue">EMPLOYMENT ENHANCEMENT SKILLS</td>
-<td style="color:olive">FREE HOUR</td>
-</tr>
-<tr>
-    <td class="slot">1-3</td>
-    <td style="color:olive">FREE HOUR</td>
-    <td style="color:skyblue">INTELLECTUAL PROPERTY RIGHTS</td>
-    <td  style="color:green">FUNDAMENTALS OF WEB APPLICATION DEVELOPMENT</td>
-    <td style="color:deeppink">MERN FULL STACK</td>
-    <td style="color:brown">ADVANCED QUANTITATIVE AND LOGICAL REASONING</td>
-</tr>
-<tr>
-    <td class="slot">3-5</td>
-    <td style="color:deeppink">MERN FULL STACK</td>
-    <td style="color:olive">FREE HOUR</td>
-    <td style="color:skyblue">INTELLECTUAL PROPERTY RIGHTS</td>
-    <td style="color:orange">ENERGY TECHNOLOGY</td>
-    <td  style="color:green">FUNDAMENTALS OF WEB APPLICATION DEVELOPMENT</td>
-</tr>
+            <tr>
+                <th style="padding:0%;">Day/Time</th>
+                <th>Monday</th>
+                <th>Tusday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="slot">8-10</td>
+                <td style="color:orange">ENERGY TECHNOLOGY</td>
+                <td style="color:green">FUNDAMENTALS OF WEB APPLICATION DEVELOPMENT</td>
+                <td style="color:deeppink">MERN FULL STACK</td>
+                <td style="color:purple">DESIGN AND ANALYTICS OF ALGORITHMS</td>
+                <td style="color:deeppink">MERN FULL STACK</td>
+            </tr>
+            <tr>
+                <td class="slot">10-12</td>
+                <td style="color:purple">DESIGN AND ANALYTICS OF ALGORITHMS</td>
+                <td style="color:deeppink">MERN FULL STACK</td>
+                <td style="color:olive">FREE HOUR</td>
+                <td style="color:blue">EMPLOYMENT ENHANCEMENT SKILLS</td>
+                <td style="color:olive">FREE HOUR</td>
+            </tr>
+            <tr>
+                <td class="slot">12-1</td>
+                <td colspan="5">LUNCH</td>
+            </tr>
+            <tr>
+                <td class="slot">1-3</td>
+                <td style="color:olive">FREE HOUR</td>
+                <td style="color:skyblue">INTELLECTUAL PROPERTY RIGHTS</td>
+                <td style="color:green">FUNDAMENTALS OF WEB APPLICATION DEVELOPMENT</td>
+                <td style="color:deeppink">MERN FULL STACK</td>
+                <td style="color:brown">ADVANCED QUANTITATIVE AND LOGICAL REASONING</td>
+            </tr>
+            <tr>
+                <td class="slot">3-5</td>
+                <td style="color:deeppink">MERN FULL STACK</td>
+                <td style="color:olive">FREE HOUR</td>
+                <td style="color:skyblue">INTELLECTUAL PROPERTY RIGHTS</td>
+                <td style="color:orange">ENERGY TECHNOLOGY</td>
+                <td style="color:green">FUNDAMENTALS OF WEB APPLICATION DEVELOPMENT</td>
+            </tr>
         </tbody>
     </table>
     <table border="1" class="subject-time">
@@ -126,12 +145,12 @@ Execute the program using runserver command.
             <tr>
                 <td>1</td>
                 <td>19AI512C</td>
-                <td style="color:deeppink" >MERN FULL STACK</td>
+                <td style="color:deeppink">MERN FULL STACK</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>19CS402</td>
-                <td  style="color:purple">DESIGN AND ANALYTICS OF ALGORITHMS</td>
+                <td style="color:purple">DESIGN AND ANALYTICS OF ALGORITHMS</td>
             </tr>
             <tr>
                 <td>3</td>
@@ -141,7 +160,7 @@ Execute the program using runserver command.
             <tr>
                 <td>4</td>
                 <td>19CH503</td>
-                <td  style="color:orange">ENERGY TECHNOLOGY</td>
+                <td style="color:orange">ENERGY TECHNOLOGY</td>
             </tr>
             <tr>
                 <td>5</td>
@@ -161,6 +180,7 @@ Execute the program using runserver command.
         </tbody>
     </table>
 </body>
+
 </html>
 ```
 ## OUTPUT
